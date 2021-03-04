@@ -64,9 +64,22 @@ elif idioma == 2:
                     print('Tipo de inimigo: Comum')
                 Ataque_personagem(tate_no_yusha.vida, listae[eescolha], 6000, lista)
                 break
-            """else:
-                print('2 inimigos')
-                print('Em desenvolvimento...')"""
+            else:
+                print('2 inimigos a caminho')
+                print('Você lutará com dois inimigos, escolha com qual irá lutar primeiro')
+                print(f'Vida do inimigo1{inimigo1.vida}\Vida do inimigo 2{inimigo2.vida}')
+                eescolha = 0
+                escolha = int(input('Inimigo[1/2]:')
+                if eescolha == 1 or eeescolha == 2:
+                              if eescolha == 1:
+                                if inimigo1.vivo:
+                                  Ataque_personagem(tate_no_yusha.vida, listae[eescolha], 6000, lista)
+                              
+                                
+                                
+                              else:
+                
+                    
                
                 
 
