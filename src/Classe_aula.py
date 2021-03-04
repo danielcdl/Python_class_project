@@ -6,17 +6,21 @@ from Enimie import numero_i, Ataque_personagem
 from random import randint
 from time import sleep
 
-class heroi:
-    nome = ''
+class Heroi:
+
+    def __init__(self, nome):
+        self.nome = nome
+        self.vivo = True
+        self.vida = 300
+        self.dinheiro_ataque = 6000
+
+    
+
+class Inimigo:
     vivo = True
     vida = 300
-    dinheiro_ataque = 6000
 
-class inimigo:
-    vivo = True
-    vida = 300
-
-class boss:
+class Boss:
     vivo = True
     vida = 1000
 
@@ -30,19 +34,18 @@ print("""\nEn: This code is kinda simulation of a real game for classes understa
 The player has a value of 6000 to buy the attacks, that will be used for fight against the enimies.""")
 
 idioma = int(input('ENGLISH[1]/PORTUGUÊS[2]:'))
-tate_no_yusha = heroi()
-inimigo1 = inimigo()
-inimigo2 = inimigo()
+inimigo1 = Inimigo()
+inimigo2 = Inimigo()
 inimigo2.vida = 500
-boss = boss()
+boss = Boss()
 listae = (inimigo1.vida, inimigo2.vida, boss.vida)
 
 if idioma == 1:
-    tate_no_yusha.nome = input('Write your name heroe:')
+    tate_no_yusha = Heroi(input('Write your name heroe:'))
     """while tate_no_yusha.vivo:
         print('Rato')"""
 elif idioma == 2:
-    tate_no_yusha.nome = input('Digite o seu nome heroi/heroina:')
+    tate_no_yusha = Heroi(input('Digite o seu nome heroi/heroina:'))
     while tate_no_yusha.vivo:
         numero_inim = numero_i()
         if numero_inim == 0:
@@ -63,7 +66,7 @@ elif idioma == 2:
                 break
             """else:
                 print('2 inimigos')
-                print('Em desenvolvimento...')""""
+                print('Em desenvolvimento...')"""
                
                 
 
